@@ -41,7 +41,7 @@ const friendAccounts = [
 
 //Ejecución de las funciones que actualizan los valores de las variables en el HTML.
 window.onload = function() {
-  iniciarSesion();
+  logIn();
   updateBalance();
   updateLimit();
   updateBills();
@@ -277,7 +277,8 @@ function transferMoney() {
   updateBalance();
 }
 
-function iniciarSesion() {
+//detecta si el usuario es válido o no
+function logIn() {
   let userName;
   let inputCode = parseInt(prompt("Ingrese el código de su cuenta"));
   
@@ -313,7 +314,7 @@ function showName(name) {
 
 //Actualiza en el DOM el saldo
 function updateBalance() {
-  if(!validUser) balance = 0;
+  if (!validUser) balance = 0;
   document.getElementById("saldo-cuenta").innerHTML = "$" + balance;
 }
 
