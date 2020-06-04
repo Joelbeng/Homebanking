@@ -1,0 +1,235 @@
+body {
+    margin: 0 auto;
+    width:70%;
+    font-family: "Source Sans Pro", sans-serif;
+    background-color: #2a333d;
+}
+
+.avatar {
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+
+.logo {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    text-align: left;
+    vertical-align: text-bottom;
+}
+
+.align-left {
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+
+.tu-cuenta {
+    padding-left: 24px;
+    margin: 0;
+    margin-left: -30px;
+    font-family: "Source Sans Pro";
+    font-size: 32px;
+    font-weight: normal;
+    color: #2a333d;
+    border-left: 6px solid #2cc197;
+}
+
+header {
+    display: flex;
+    margin: 7% auto;
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.cuenta-info {
+    display: block;
+    width: 100%;
+}
+
+#nombre {
+    display: inline-block;
+    margin-right: 10px;
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+.links {
+    position: relative;
+    display: block;
+    cursor:pointer;
+    margin: 10px 0;
+    padding:10px 5px;
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    color: #666;
+    border: 0;
+    background-color: transparent;
+}
+
+.links:hover {
+    padding-left: 20px;
+    color: #2cc197;
+}
+
+.links:focus {
+    outline: none;
+}
+
+.white-container {
+    display: flex;
+    padding: 30px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #979797;
+    border-radius: 8px;
+    background-color: #fff;
+    justify-content: center;
+}
+
+.green-container {
+    display: flex;
+    width: 75%;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    background-color: #2cc197;
+    align-items: center;
+}
+
+.menu-container {
+    display: block;
+    width: 35%;
+    padding-right: 20px;
+}
+
+.cuenta-container {
+    width: 35%;
+}
+
+#saldo-cuenta {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    overflow: hidden;
+    font-size: 6.5vw;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+#limite-extraccion {
+    overflow: hidden;
+    font-size: 15px;
+    text-overflow: ellipsis;
+}
+
+#modal {
+    position:fixed;
+    justify-content: center;
+    align-items: center;
+    z-index:1;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.disabled {
+    display:none;
+}
+
+.active {
+    display: flex;
+}
+
+#services {
+    width:30%;
+    padding:10px;
+    background-color: #2a333d;
+    border-radius: 8px;
+    position: relative;
+}
+
+.service {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    font-size:18px;
+    border:1px solid#2a333d;
+    border-top:none;
+    padding:30px;
+    top:0;
+    bottom:0;
+    right:0;
+    cursor:pointer;
+}
+
+.service:first-of-type {
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+}
+
+.service:last-of-type {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.service:hover {
+    color:#fff;
+    background-color: #2cc197b7;
+    transition: all 0.2s;
+}
+
+#closeBtn {
+    position:absolute;
+    top:-25px;
+    right:-25px;
+    background-color: transparent;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        width:80%;
+    }
+    
+    .white-container {
+        flex-direction: column-reverse;
+    }
+
+    .green-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #saldo-cuenta {
+        font-size: 8.5vw;
+    }
+
+    .menu-container {
+        width: 100%;
+    }
+
+    header {
+        margin-bottom: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    #services {
+        width:80%;
+    }
+}
